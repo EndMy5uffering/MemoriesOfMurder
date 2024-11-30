@@ -2,10 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PickableTrigger : MonoBehaviour
 {
     public GameObject requiredItem;
+
+    public UnityEvent<GameObject> onItemDeliverd = new UnityEvent<GameObject>();
 
     // Start is called before the first frame update
     void Start()
@@ -22,12 +25,10 @@ public class PickableTrigger : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag == "Player")
+        if(other.gameObject.tag != "Player") return;
+        if(other.gameObject.GetComponent<PickupScript>().HasItemInHand() && other.gameObject.GetComponent<PickupScript>().GetHeldItem() == requiredItem)
         {
-            if(other.gameObject.GetComponent<PickupScript>().HasItemInHand() && other.gameObject.GetComponent<PickupScript>().GetHeldItem() == requiredItem)
-            {
-                other.gameObject.GetComponent<PickupScript>().DestroyItemInHand();
-            }
+            onItemDeliverd?.Invoke(other.gameObject.GetComponent<PickupScript>().GetHeldItem());
         }
     }
 }
