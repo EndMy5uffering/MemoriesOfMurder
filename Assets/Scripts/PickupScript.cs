@@ -19,7 +19,12 @@ public class PickupScript : MonoBehaviour
 
     public void OnInteract(GameObject obj)
     {
-        if(HasItemInHand()) DropItem();
+        bool isSame = pickedItem == obj;
+        if(HasItemInHand() || obj == null) 
+        {
+            DropItem();
+            if(isSame) return;
+        }
 
         prevLayer = obj.layer;
         prevParent = obj.transform.parent;
@@ -41,6 +46,7 @@ public class PickupScript : MonoBehaviour
 
     public void DropItem()
     {
+        if(pickedItem == null) return;
         pickedItem.layer = prevLayer;
         pickedItem.transform.parent = prevParent;
 
