@@ -8,5 +8,6 @@ public class ToasterNPC : NPC
     {
         this.STATE_AMOUNT = DialogTexts.dialogsToaster.Length;
         this.dialogs = DialogTexts.dialogsToaster;
+        voiceIndex = Constants.TOASTER_INT;
     }
 }
