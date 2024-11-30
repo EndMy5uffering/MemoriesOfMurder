@@ -99,3 +99,4 @@ fmod_editor.log
 #No copyright for:
 /Assets/Editor/*
 /Assets/utilord_utility_package/*
+/ProjectSettings/Packages/com.unity.probuilder/Settings.json
