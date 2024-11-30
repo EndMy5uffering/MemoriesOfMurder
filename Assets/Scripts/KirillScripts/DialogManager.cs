@@ -12,6 +12,8 @@ public class DialogManager : MonoBehaviour
     private Queue<string> sentences;
 
     private bool isDialogActive = false;
+    private NPC curNpc;
+    private Dialog curDialog;
 
     private void Awake()
     {
@@ -27,20 +29,23 @@ public class DialogManager : MonoBehaviour
     {
         if (!isDialogActive)
         {
-            Dialog dialog = npc.getDialog();
+            curDialog = npc.getDialog();
 
-            if (dialog != null)
+            if (curDialog != null)
             {
+                curNpc = npc;
+                npc.SetAnimator(true);
+
                 isDialogActive = true;
                 dialogWindow.gameObject.SetActive(true);
                 sentences.Clear();
 
-                foreach (string line in dialog.dialogueLines)
+                foreach (string line in curDialog.dialogueLines)
                 {
                     sentences.Enqueue(line);
                 }
 
-                dialogWindow.SetTitle(dialog.npcName);
+                dialogWindow.SetTitle(curDialog.npcName);
                 DisplayNextSentence();
             }
         }
@@ -56,7 +61,7 @@ public class DialogManager : MonoBehaviour
         {
             if (sentences.Count == 0)
             {
-                EndDialogue();
+                EndDialog();
                 return;
             }
 
@@ -65,8 +70,17 @@ public class DialogManager : MonoBehaviour
         }
     }
 
-    private void EndDialogue()
+    private void EndDialog()
     {
+        if (curNpc != null)
+            curNpc.SetAnimator(false);
+        curNpc = null;
+        Quest quest = curDialog.GetQuest();
+        if (quest != null)
+            QuestManager.Instance.StartQuest(quest);
+        Debug.Log(quest);
+        curDialog = null;
+
         dialogWindow.SetTitle("");
         dialogWindow.SetMessage("");
         dialogWindow.gameObject.SetActive(false);
