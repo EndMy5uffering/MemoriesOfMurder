@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour
     private float rotationX = 0.0f;
 
     public float rayDistance = 10;
-    
+
     public Camera cam;
     float time = 0;
 
@@ -54,8 +54,6 @@ public class PlayerController : MonoBehaviour
 
     private void HandleInteraction()
     {
-        if(picker.HasItemInHand()) picker.DropItem();
-
         Ray ray = new Ray(cam.transform.position, cam.transform.forward);
 
         RaycastHit hit;
@@ -65,6 +63,9 @@ public class PlayerController : MonoBehaviour
             if(obj.tag == "Pickable")
             {
                 onInteraction?.Invoke(obj);
+            }else
+            {
+                onInteraction?.Invoke(null);
             }
 
             if(obj.GetComponent<NPC>() != null)
@@ -77,7 +78,7 @@ public class PlayerController : MonoBehaviour
 
     void OnDrawGizmos()
     {
-        Gizmos.DrawLine(cam.transform.position, cam.transform.position + cam.transform.forward * rayDistance);        
+        Gizmos.DrawLine(cam.transform.position, cam.transform.position + cam.transform.forward * rayDistance);
     }
 
     void HandleMovement()
@@ -100,13 +101,13 @@ public class PlayerController : MonoBehaviour
             if(moveDirection.magnitude > 0) HeadWoble();
 
         }
-  
+
         // Apply gravity
         moveDirection.y -= gravity * Time.deltaTime;
 
         // Move the controller
         characterController.Move(moveDirection * Time.deltaTime);
-        
+
     }
 
     void HandleRotation()
