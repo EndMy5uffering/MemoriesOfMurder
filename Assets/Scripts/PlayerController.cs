@@ -32,7 +32,7 @@ public class PlayerController : MonoBehaviour
     {
         picker = GetComponent<PickupScript>();
         onInteraction += picker.OnInteract;
-        initHeadY = cam.transform.position.y;
+        initHeadY = cam.transform.localPosition.y;
     }
 
     void Start()
@@ -99,12 +99,13 @@ public class PlayerController : MonoBehaviour
             if(moveDirection.magnitude > 0) HeadWoble();
 
         }
-
+  
         // Apply gravity
         moveDirection.y -= gravity * Time.deltaTime;
 
         // Move the controller
         characterController.Move(moveDirection * Time.deltaTime);
+        
     }
 
     void HandleRotation()
@@ -121,7 +122,7 @@ public class PlayerController : MonoBehaviour
 
     private void HeadWoble()
     {
-        cam.transform.position = new Vector3(cam.transform.position.x, Mathf.Lerp(initHeadY-0.02f, initHeadY + 0.02f, headBob.Evaluate(0.5f * (math.sin(time)+1.0f))), cam.transform.position.z);
+        cam.transform.localPosition = new Vector3(cam.transform.localPosition.x, Mathf.Lerp(initHeadY-0.02f, initHeadY + 0.02f, headBob.Evaluate(0.5f * (math.sin(time)+1.0f))), cam.transform.localPosition.z);
         time += Time.deltaTime*bobingspeed;
         if(time > Math.PI*2) time = 0;
 
