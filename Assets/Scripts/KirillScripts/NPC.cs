@@ -8,6 +8,7 @@ public abstract class NPC : MonoBehaviour // Inheritance of MonoBehaviour here o
     protected Dialog[] dialogs;
     private int state = 0;
     private Animator animator;
+    protected int voiceIndex = -1;
 
     private void Awake()
     {
@@ -43,5 +44,10 @@ public abstract class NPC : MonoBehaviour // Inheritance of MonoBehaviour here o
     {
         if (animator != null)
             animator.SetBool("isTalking", isAnimatorPlaying);
+    }
+
+    public void PlaySound()
+    {
+        //AudioManager.Instance.PlayOneShotFMOD2DInt("Talk", "Voice", voiceIndex);
     }
 }

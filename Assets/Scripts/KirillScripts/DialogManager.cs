@@ -67,6 +67,7 @@ public class DialogManager : MonoBehaviour
 
             string sentence = sentences.Dequeue();
             dialogWindow.SetMessage(sentence);
+            curNpc.PlaySound();
         }
     }
 
@@ -75,10 +76,15 @@ public class DialogManager : MonoBehaviour
         if (curNpc != null)
             curNpc.SetAnimator(false);
         curNpc = null;
-        Quest quest = curDialog.GetQuest();
-        if (quest != null)
+        List<Quest> startQuests = curDialog.GetStartQuests();
+        foreach (Quest quest in startQuests)
             QuestManager.Instance.StartQuest(quest);
-        Debug.Log(quest);
+        List<Quest> endQuests = curDialog.GetEndQuests();
+        foreach (Quest quest in endQuests)
+            QuestManager.Instance.EndQuest(quest);
+        List<NpcStatePair> npcStatePairs = curDialog.GetNpcStatePairs();
+        foreach (NpcStatePair pair in npcStatePairs)
+            GameManager.Instance.ChangeNpcState(pair);
         curDialog = null;
 
         dialogWindow.SetTitle("");
