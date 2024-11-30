@@ -11,12 +11,18 @@ public class AudioManager : Singleton<AudioManager>
 
     private AudioSource source;
 
+    void Awake()
+    {
+        //DontDestroyOnLoad(this);
+    }
+
     void Start()
     {
         source = GetComponent<AudioSource>();
         _bgmEvent = FMODUnity.RuntimeManager.CreateInstance("event:/BGM");
         _titleScreenEvent = FMODUnity.RuntimeManager.CreateInstance("event:/Menu");
-        PlayTitleScreenMusic();
+        //PlayTitleScreenMusic();
+        PlayMainBGM();
     }
 
     public void PlayOneShotFMOD2D(string eventName)
@@ -66,6 +72,11 @@ public class AudioManager : Singleton<AudioManager>
     public void PlayTitleScreenMusic()
     {
         _titleScreenEvent.start();
+    }
+
+    public void PlayMainBGM()
+    {
+        _bgmEvent.start();
     }
 
     public void TransitionToGame()

@@ -94,6 +94,7 @@ public class PlayerController : MonoBehaviour
             if (Input.GetButton("Jump"))
             {
                 moveDirection.y = jumpSpeed;
+                AudioManager.Instance.PlayOneShotFMOD2D("Jump");
             }
 
             if(moveDirection.magnitude > 0) HeadWoble();
@@ -123,9 +124,19 @@ public class PlayerController : MonoBehaviour
     private void HeadWoble()
     {
         cam.transform.localPosition = new Vector3(cam.transform.localPosition.x, Mathf.Lerp(initHeadY-0.02f, initHeadY + 0.02f, headBob.Evaluate(0.5f * (math.sin(time)+1.0f))), cam.transform.localPosition.z);
+        float oldTime = time;
         time += Time.deltaTime*bobingspeed;
-        if(time > Math.PI*2) time = 0;
+        if (time > Math.PI * 2)
+        {
+            time = 0;
+            AudioManager.Instance.PlayOneShotFMOD2D("Footstep");
+        }
 
-        
+        if (time > Math.PI && oldTime < Math.PI)
+        {
+            AudioManager.Instance.PlayOneShotFMOD2D("Footstep");
+        }
+
+
     }
 }

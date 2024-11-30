@@ -42,7 +42,7 @@ MonoBehaviour:
   Path: Assets/FMOD/MoM FMOD Project/Build/Desktop/BGM.bank
   Name: BGM
   StudioPath: bank:/BGM
-  lastModified: 638685846213288298
+  lastModified: 638685898280631063
   FileSizes:
   - Name: Desktop
     Value: 2341792
@@ -114,10 +114,10 @@ MonoBehaviour:
   Path: Assets/FMOD/MoM FMOD Project/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638685846212822631
+  lastModified: 638685898280271245
   FileSizes:
   - Name: Desktop
-    Value: 1070848
+    Value: 1077376
   Exists: 1
 --- !u!114 &-4428546882572827548
 MonoBehaviour:
@@ -189,7 +189,7 @@ MonoBehaviour:
   Path: Assets/FMOD/MoM FMOD Project/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638685846212045606
+  lastModified: 638685898278361181
   FileSizes:
   - Name: Desktop
     Value: 14912
@@ -245,12 +245,13 @@ MonoBehaviour:
   - {fileID: 6352111782781577240}
   - {fileID: -7864385874641614221}
   - {fileID: -2526163017987635625}
+  - {fileID: 5241448250425500672}
   EditorParameters: []
   MasterBanks:
   - {fileID: -1449711425954082792}
   StringsBanks:
   - {fileID: 5915991193081223123}
-  cacheTime: 638685846213288298
+  cacheTime: 638685898280631063
   cacheVersion: 131621
 --- !u!114 &817732448093843805
 MonoBehaviour:
@@ -276,6 +277,33 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &5241448250425500672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Jump
+  m_EditorClassIdentifier: 
+  Path: event:/Jump
+  Guid:
+    Data1: 889790156
+    Data2: 1260441765
+    Data3: 1824732571
+    Data4: -208000626
+  Banks:
+  - {fileID: -5386263618327865646}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 429
 --- !u!114 &5915991193081223123
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -291,10 +319,10 @@ MonoBehaviour:
   Path: Assets/FMOD/MoM FMOD Project/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638685846212097397
+  lastModified: 638685898278420577
   FileSizes:
   - Name: Desktop
-    Value: 1258
+    Value: 1292
   Exists: 1
 --- !u!114 &6352111782781577240
 MonoBehaviour:
