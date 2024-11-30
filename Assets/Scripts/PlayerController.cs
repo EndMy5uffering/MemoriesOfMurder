@@ -99,12 +99,13 @@ public class PlayerController : MonoBehaviour
             if(moveDirection.magnitude > 0) HeadWoble();
 
         }
-
+  
         // Apply gravity
         moveDirection.y -= gravity * Time.deltaTime;
 
         // Move the controller
         characterController.Move(moveDirection * Time.deltaTime);
+        
     }
 
     void HandleRotation()
