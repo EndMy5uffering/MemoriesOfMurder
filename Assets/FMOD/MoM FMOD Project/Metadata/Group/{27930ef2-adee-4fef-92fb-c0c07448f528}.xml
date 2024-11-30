@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="MixerGroup" id="{27930ef2-adee-4fef-92fb-c0c07448f528}">
+		<property name="name">
+			<value>Boombox BGM</value>
+		</property>
+		<relationship name="effectChain">
+			<destination>{96f62f01-b526-4022-9e61-b3d1206901bd}</destination>
+		</relationship>
+		<relationship name="panner">
+			<destination>{2fbe86df-d825-45a6-95d0-b3f933cc3857}</destination>
+		</relationship>
+		<relationship name="output">
+			<destination>{a26b1fbe-1ee9-4013-a3d7-a8c2849ab90f}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusEffectChain" id="{96f62f01-b526-4022-9e61-b3d1206901bd}">
+		<relationship name="effects">
+			<destination>{29c46116-ae49-4468-b483-1749a9c4fa9d}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusPanner" id="{2fbe86df-d825-45a6-95d0-b3f933cc3857}" />
+	<object class="MixerBusFader" id="{29c46116-ae49-4468-b483-1749a9c4fa9d}" />
+</objects>
