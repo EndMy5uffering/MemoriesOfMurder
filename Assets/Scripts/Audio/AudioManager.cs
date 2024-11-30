@@ -8,6 +8,8 @@ public class AudioManager : Singleton<AudioManager>
 
     private FMOD.Studio.EventInstance _bgmEvent;
     private FMOD.Studio.EventInstance _titleScreenEvent;
+    private FMOD.Studio.EventInstance _endingEvent1;
+    private FMOD.Studio.EventInstance _endingEvent2;
 
     private AudioSource source;
 
@@ -79,6 +81,16 @@ public class AudioManager : Singleton<AudioManager>
         _bgmEvent.start();
     }
 
+    public void PlayEndingBGM1()
+    {
+        _endingEvent1.start();
+    }
+
+    public void PlayEndingBGM2()
+    {
+        _endingEvent2.start();
+    }
+
     public void TransitionToGame()
     {
         StartCoroutine(ToGame());
@@ -99,6 +111,8 @@ public class AudioManager : Singleton<AudioManager>
     private IEnumerator ToTitleScreen()
     {
         _bgmEvent.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        _endingEvent1.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        _endingEvent2.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
         yield return new WaitForSecondsRealtime(0.5f);
         _titleScreenEvent.start();
     }

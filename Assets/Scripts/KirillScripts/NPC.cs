@@ -48,6 +48,6 @@ public abstract class NPC : MonoBehaviour // Inheritance of MonoBehaviour here o
 
     public void PlaySound()
     {
-        //AudioManager.Instance.PlayOneShotFMOD2DInt("Talk", "Voice", voiceIndex);
+        AudioManager.Instance.PlayOneShotFMOD2DInt("Talk", "Voice", voiceIndex);
     }
 }
