@@ -12,16 +12,26 @@ public class PlayerController : MonoBehaviour
     public CharacterController characterController;
     private Vector3 moveDirection = Vector3.zero;
     private float rotationX = 0.0f;
+
+    public float rayDistance = 10;
     
     public Camera cam;
 
     public delegate void PlayerInteract(GameObject interacted);
+    private PlayerInteract onInteraction;
+
+    private PickupScript picker;
+
+    void Awake()
+    {
+        picker = GetComponent<PickupScript>();
+        onInteraction += picker.OnInteract;
+    }
 
     void Start()
     {
         characterController = GetComponent<CharacterController>();
         Cursor.lockState = CursorLockMode.Locked;
-
 
     }
 
@@ -29,24 +39,30 @@ public class PlayerController : MonoBehaviour
     {
         HandleMovement();
         HandleRotation();
-        HandleInteraction();
+        if(Input.GetKeyDown(KeyCode.E)) HandleInteraction();
     }
 
     private void HandleInteraction()
     {
+        if(picker.HasItemInHand()) picker.DropItem();
+
         Ray ray = new Ray(cam.transform.position, cam.transform.forward);
 
         RaycastHit hit;
-        if (Physics.Raycast(ray, 10))
+        if (Physics.Raycast(ray, out hit, rayDistance))
         {
-
+            GameObject obj = hit.transform.gameObject;
+            if(obj.tag == "Pickable")
+            {
+                onInteraction?.Invoke(obj);
+            }
         }
 
     }
 
     void OnDrawGizmos()
     {
-        Gizmos.DrawLine(cam.transform.position, cam.transform.position + cam.transform.forward * 10);        
+        Gizmos.DrawLine(cam.transform.position, cam.transform.position + cam.transform.forward * rayDistance);        
     }
 
     void HandleMovement()
