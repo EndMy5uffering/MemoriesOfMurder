@@ -1288,6 +1288,7 @@ MonoBehaviour:
   jumpSpeed: 6
   gravity: 30
   characterController: {fileID: 266280186}
+  cam: {fileID: 1594190746}
 --- !u!23 &266280189
 MeshRenderer:
   m_ObjectHideFlags: 0

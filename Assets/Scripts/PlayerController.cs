@@ -1,3 +1,4 @@
+using System;
 using System.Linq;
 using UnityEngine;
 
@@ -12,19 +13,40 @@ public class PlayerController : MonoBehaviour
     private Vector3 moveDirection = Vector3.zero;
     private float rotationX = 0.0f;
     
+    public Camera cam;
+
+    public delegate void PlayerInteract(GameObject interacted);
+
     void Start()
     {
         characterController = GetComponent<CharacterController>();
         Cursor.lockState = CursorLockMode.Locked;
 
-        
+
     }
 
     void Update()
     {
         HandleMovement();
         HandleRotation();
-        
+        HandleInteraction();
+    }
+
+    private void HandleInteraction()
+    {
+        Ray ray = new Ray(cam.transform.position, cam.transform.forward);
+
+        RaycastHit hit;
+        if (Physics.Raycast(ray, 10))
+        {
+
+        }
+
+    }
+
+    void OnDrawGizmos()
+    {
+        Gizmos.DrawLine(cam.transform.position, cam.transform.position + cam.transform.forward * 10);        
     }
 
     void HandleMovement()
