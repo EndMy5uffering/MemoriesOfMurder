@@ -2,10 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PickableTrigger : MonoBehaviour
 {
     public GameObject requiredItem;
+
+    public UnityEvent onItemDeliverd;
 
     // Start is called before the first frame update
     void Start()
@@ -27,6 +30,7 @@ public class PickableTrigger : MonoBehaviour
             if(other.gameObject.GetComponent<PickupScript>().HasItemInHand() && other.gameObject.GetComponent<PickupScript>().GetHeldItem() == requiredItem)
             {
                 other.gameObject.GetComponent<PickupScript>().DestroyItemInHand();
+                onItemDeliverd?.Invoke();
             }
         }
     }
