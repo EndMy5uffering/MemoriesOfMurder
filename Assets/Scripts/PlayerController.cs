@@ -15,8 +15,9 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         characterController = GetComponent<CharacterController>();
+        Cursor.lockState = CursorLockMode.Locked;
+
         
-        Debug.Log("I am: " + this.gameObject);
     }
 
     void Update()
