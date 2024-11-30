@@ -28,6 +28,9 @@ public class PlayerController : MonoBehaviour
     public float bobingspeed = 8;
     private float initHeadY;
 
+    public bool exitMenuOpen = false;
+    public GameObject exitMenu;
+
     void Awake()
     {
         picker = GetComponent<PickupScript>();
@@ -44,6 +47,23 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        if(Input.GetKeyDown(KeyCode.Escape)) 
+        {
+            exitMenu.SetActive(!exitMenuOpen);
+            if(exitMenuOpen)
+            {
+                exitMenuOpen = false;
+                Cursor.lockState = CursorLockMode.Locked;
+            }
+            else
+            {
+                exitMenuOpen = true;
+                Cursor.lockState = CursorLockMode.None;
+            }
+        }
+
+        if(exitMenuOpen) return;
+
         HandleMovement();
         HandleRotation();
         if(Input.GetKeyDown(KeyCode.E)) HandleInteraction();
