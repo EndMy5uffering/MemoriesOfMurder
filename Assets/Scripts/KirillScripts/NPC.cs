@@ -7,9 +7,11 @@ public abstract class NPC : MonoBehaviour // Inheritance of MonoBehaviour here o
     protected int STATE_AMOUNT;
     protected Dialog[] dialogs;
     private int state = 0;
+    private Animator animator;
 
     private void Awake()
     {
+        gameObject.TryGetComponent<Animator>(out animator);
         Init();
     }
     public abstract void Init();
@@ -35,5 +37,11 @@ public abstract class NPC : MonoBehaviour // Inheritance of MonoBehaviour here o
             Debug.LogError("Cant load new state with this number");
         }
         state = newState;
+    }
+
+    public void SetAnimator(bool isAnimatorPlaying)
+    {
+        if (animator != null)
+            animator.SetBool("isTalking", isAnimatorPlaying);
     }
 }

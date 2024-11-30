@@ -1,5 +1,6 @@
 using System;
 using System.Linq;
+using Unity.Mathematics;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -16,16 +17,22 @@ public class PlayerController : MonoBehaviour
     public float rayDistance = 10;
     
     public Camera cam;
+    float time = 0;
 
     public delegate void PlayerInteract(GameObject interacted);
     private PlayerInteract onInteraction;
 
     private PickupScript picker;
 
+    public AnimationCurve headBob;
+    public float bobingspeed = 8;
+    private float initHeadY;
+
     void Awake()
     {
         picker = GetComponent<PickupScript>();
         onInteraction += picker.OnInteract;
+        initHeadY = cam.transform.localPosition.y;
     }
 
     void Start()
@@ -40,6 +47,9 @@ public class PlayerController : MonoBehaviour
         HandleMovement();
         HandleRotation();
         if(Input.GetKeyDown(KeyCode.E)) HandleInteraction();
+
+        if(Input.GetMouseButtonDown(0)) GameScene.onLeftClickEvent?.Invoke();
+
     }
 
     private void HandleInteraction()
@@ -55,6 +65,11 @@ public class PlayerController : MonoBehaviour
             if(obj.tag == "Pickable")
             {
                 onInteraction?.Invoke(obj);
+            }
+
+            if(obj.GetComponent<NPC>() != null)
+            {
+                GameScene.onInteractionWithNpcEvent?.Invoke(obj.GetComponent<NPC>());
             }
         }
 
@@ -80,13 +95,17 @@ public class PlayerController : MonoBehaviour
             {
                 moveDirection.y = jumpSpeed;
             }
-        }
 
+            if(moveDirection.magnitude > 0) HeadWoble();
+
+        }
+  
         // Apply gravity
         moveDirection.y -= gravity * Time.deltaTime;
 
         // Move the controller
         characterController.Move(moveDirection * Time.deltaTime);
+        
     }
 
     void HandleRotation()
@@ -99,5 +118,14 @@ public class PlayerController : MonoBehaviour
 
         transform.localRotation = Quaternion.Euler(0, transform.localRotation.eulerAngles.y + mouseX, 0);
         Camera.main.transform.localRotation = Quaternion.Euler(rotationX, 0, 0);
+    }
+
+    private void HeadWoble()
+    {
+        cam.transform.localPosition = new Vector3(cam.transform.localPosition.x, Mathf.Lerp(initHeadY-0.02f, initHeadY + 0.02f, headBob.Evaluate(0.5f * (math.sin(time)+1.0f))), cam.transform.localPosition.z);
+        time += Time.deltaTime*bobingspeed;
+        if(time > Math.PI*2) time = 0;
+
+        
     }
 }
