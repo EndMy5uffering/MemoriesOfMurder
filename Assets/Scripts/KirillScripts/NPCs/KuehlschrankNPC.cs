@@ -13,11 +13,13 @@ public class KuehlschrankNPC : NPC
 
     public void Open()
     {
-        //anim
+        if (animator != null)
+            animator.SetBool("isOpen", true);
     }
 
     public void Close()
     {
-        //anim
+        if (animator != null)
+            animator.SetBool("isOpen", false);
     }
 }
