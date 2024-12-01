@@ -22,6 +22,7 @@ public class QuestManager : MonoBehaviour
 
     public void StartQuest(Quest quest)
     {
+        quest.StartQuest();
         quests.Add(quest);
         questListWindow.LocateQuests(quests);
     }
@@ -29,6 +30,7 @@ public class QuestManager : MonoBehaviour
     {
         quests.Remove(quest);
         questListWindow.LocateQuests(quests);
+        quest.EndQuest();
     }
 
 }

@@ -7,27 +7,52 @@ public class Dialog
 {
     public string npcName;
     public List<string> dialogueLines;
-    private int questId;
+    private List<int> startQuestIds;
+    private List<int> endQuestIds;
+    private List<NpcStatePair> npcStatePairs;
 
-    public Dialog(string npcName, List<string> dialogueLines, int questId)
+    public Dialog(string npcName, List<string> dialogueLines, List<int> startQuestIds, List<int> endQuestIds, List<NpcStatePair> npcStatePairs)
     {
         this.npcName = npcName;
         this.dialogueLines = dialogueLines;
-        Debug.Log("I try to create Dialog with questId = " + questId);
-        this.questId = questId;
-        Debug.Log("My quest is: " + questId);
+        this.startQuestIds = startQuestIds;
+        this.endQuestIds = endQuestIds;
+
+        if (npcStatePairs == null )
+            npcStatePairs = new List<NpcStatePair>();
+        this.npcStatePairs = npcStatePairs;
     }
 
-    public Dialog(string npcName, List<string> dialogueLines)
+    public List<Quest> GetStartQuests()
     {
-        this.npcName = npcName;
-        this.dialogueLines = dialogueLines;
+        List<Quest> quests = new List<Quest>();
+        if (startQuestIds != null)
+        {
+            foreach (int i in startQuestIds)
+            {
+                if (i >= 0 && i < QuestTexts.quests.Length)
+                    quests.Add(QuestTexts.quests[i]);
+            }
+        }
+        return quests;
     }
 
-    public Quest GetQuest()
+    public List<Quest> GetEndQuests()
     {
-        if (questId == -1 || questId >= QuestTexts.quests.Length)
-            return null;
-        return QuestTexts.quests[questId];
+        List<Quest> quests = new List<Quest>();
+        if (endQuestIds != null)
+        {
+            foreach (int i in endQuestIds)
+            {
+                if (i >= 0 && i < QuestTexts.quests.Length)
+                    quests.Add(QuestTexts.quests[i]);
+            }
+        }
+        return quests;
+    }
+
+    public List<NpcStatePair> GetNpcStatePairs()
+    {
+        return npcStatePairs;
     }
 }
