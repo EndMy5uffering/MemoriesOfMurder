@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8385577320396887421}
+  - component: {fileID: 2527792323965793912}
   m_Layer: 0
   m_Name: kitchen_smth (1)
   m_TagString: Untagged
@@ -33,6 +34,27 @@ Transform:
   - {fileID: 4563775006876823845}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &2527792323965793912
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 676948240085934669}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.265583, y: 2.1214144, z: 2.1775236}
+  m_Center: {x: -0.028148472, y: 1.0422829, z: -0.037003994}
 --- !u!1 &5446781874011373556
 GameObject:
   m_ObjectHideFlags: 0
@@ -177,7 +199,7 @@ MeshRenderer:
   m_RenderingLayerMask: 257
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 05611884efbf1054fbbea9566d8b0461, type: 2}
+  - {fileID: 2100000, guid: 1d409a61d43f65d4a8bd8d1d5fdc9c42, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

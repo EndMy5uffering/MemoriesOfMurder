@@ -9,6 +9,7 @@ public class StartMenuScript : MonoBehaviour
 {
 
     public int GameScene = 0;
+    public int CreditScene = 6;
 
     public void onStartButton()
     {
@@ -22,7 +23,7 @@ public class StartMenuScript : MonoBehaviour
 
     public void onCredits()
     {
-
+        SceneManager.LoadScene(CreditScene);
     }
 
 }
