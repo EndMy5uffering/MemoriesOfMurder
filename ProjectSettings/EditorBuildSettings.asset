@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/PlayerTestScene.unity
     guid: a32d2095e0bb6694e88e0739c6d82149
+  - enabled: 1
+    path: Assets/Scenes/PatricksPlayground.unity
+    guid: 35b45ad71cfb4d944b0ab75006f7437f
   m_configObjects: {}

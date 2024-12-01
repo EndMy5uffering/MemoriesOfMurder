@@ -11,20 +11,31 @@ public class AudioManager : Singleton<AudioManager>
     private FMOD.Studio.EventInstance _endingEvent1;
     private FMOD.Studio.EventInstance _endingEvent2;
 
+    public AudioClip buttonClickClip;
+
     private AudioSource source;
+
+    private static bool initialised = false;
 
     void Awake()
     {
-        //DontDestroyOnLoad(this);
-    }
+        if (GameObject.Find("AudioManager") != gameObject) {
+            Destroy(gameObject);
+        }
 
-    void Start()
-    {
+        if (initialised)
+            return;
+
         source = GetComponent<AudioSource>();
         _bgmEvent = FMODUnity.RuntimeManager.CreateInstance("event:/BGM");
         _titleScreenEvent = FMODUnity.RuntimeManager.CreateInstance("event:/Menu");
-        //PlayTitleScreenMusic();
-        PlayMainBGM();
+        _endingEvent1 = FMODUnity.RuntimeManager.CreateInstance("event:/Ending 1");
+        _endingEvent2 = FMODUnity.RuntimeManager.CreateInstance("event:/Ending 2");
+        PlayTitleScreenMusic();
+
+        DontDestroyOnLoad(this);
+
+        initialised = true;
     }
 
     public void PlayOneShotFMOD2D(string eventName)
@@ -101,6 +112,11 @@ public class AudioManager : Singleton<AudioManager>
         StartCoroutine(ToTitleScreen());
     }
 
+    public void PlayButtonClickSound()
+    {
+        source.PlayOneShot(buttonClickClip, 0.1f);
+    }
+
     private IEnumerator ToGame()
     {
         _titleScreenEvent.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
@@ -116,5 +132,7 @@ public class AudioManager : Singleton<AudioManager>
         yield return new WaitForSecondsRealtime(0.5f);
         _titleScreenEvent.start();
     }
+
+
 
 }
