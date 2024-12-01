@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 8506200377903446844}
   - component: {fileID: 2057664499409139584}
   - component: {fileID: 4966644222482739361}
+  - component: {fileID: 8091306932438426342}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -116,6 +117,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &8091306932438426342
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7092863747822319868}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.05741979, y: 0.027436944, z: 0.009999999}
+  m_Center: {x: -0.028863508, y: 0.00871859, z: 0}
 --- !u!1 &8134424983189220167
 GameObject:
   m_ObjectHideFlags: 0
@@ -127,6 +149,7 @@ GameObject:
   - component: {fileID: 4308776017539364437}
   - component: {fileID: 7813022791960978508}
   - component: {fileID: 7904954044909150063}
+  - component: {fileID: 1943012651577579576}
   m_Layer: 0
   m_Name: Cube.002
   m_TagString: Untagged
@@ -199,3 +222,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &1943012651577579576
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8134424983189220167}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.04846257, y: 0.010151724, z: 0.010000002}
+  m_Center: {x: 0.019231282, y: -0.00007586153, z: -1.7151423e-10}
