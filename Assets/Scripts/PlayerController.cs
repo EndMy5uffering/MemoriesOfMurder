@@ -113,6 +113,7 @@ public class PlayerController : MonoBehaviour
         if (Physics.Raycast(ray, out hit, rayDistance))
         {
             GameObject obj = hit.transform.gameObject;
+            Debug.Log(obj);
             if(obj.tag == "Pickable")
             {
                 onInteraction?.Invoke(obj);
