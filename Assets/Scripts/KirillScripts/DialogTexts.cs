@@ -63,7 +63,7 @@ public static class DialogTexts
             new List<string>
         {
             "Mein Mund ist so trocken und kalt ist mir auch.",
-            "Kannst du mir nicht ein bisschen heißes Wasser bringen?",
+            "Kannst du mir nicht ein bisschen heiï¿½es Wasser bringen?",
         },
             new List<int>
             {
@@ -79,7 +79,7 @@ public static class DialogTexts
         new Dialog(Constants.BUEGELEISEN,
             new List<string>
         {
-            "Kannst du mir nicht ein bisschen heißes Wasser bringen?",
+            "Kannst du mir nicht ein bisschen heiï¿½es Wasser bringen?",
         },
             null,
             null,
@@ -89,8 +89,8 @@ public static class DialogTexts
             new List<string>
         {
             "Ah... Das tut gut.",
-            "Papa war wirklich froh das Mama schnell noch ein Hemd für ihn gebügelt hat.",
-            "Ich bin mir auch sicher dass er ihr nie was antuen würde.",
+            "Papa war wirklich froh das Mama schnell noch ein Hemd fï¿½r ihn gebï¿½gelt hat.",
+            "Ich bin mir auch sicher dass er ihr nie was antuen wï¿½rde.",
         },
             null,
             new List<int>
@@ -106,8 +106,8 @@ public static class DialogTexts
         new Dialog(Constants.BUEGELEISEN,
             new List<string>
         {
-            "Papa war wirklich froh das Mama schnell noch ein Hemd für ihn gebügelt hat.",
-            "Ich bin mir auch sicher dass er ihr nie was antuen würde.",
+            "Papa war wirklich froh das Mama schnell noch ein Hemd fï¿½r ihn gebï¿½gelt hat.",
+            "Ich bin mir auch sicher dass er ihr nie was antuen wï¿½rde.",
         },
             null,
             null,
@@ -119,7 +119,7 @@ public static class DialogTexts
         new Dialog(Constants.FERNSEHER,
             new List<string>
         {
-            "Möchtest du wieder die drei Fragezeichen sehen?",
+            "Mï¿½chtest du wieder die drei Fragezeichen sehen?",
         },
             null,
             null,
@@ -131,7 +131,7 @@ public static class DialogTexts
         new Dialog(Constants.FERNSEHER,
             new List<string>
         {
-            "Wann löst du denn deinen 1. Fall?",
+            "Wann lï¿½st du denn deinen 1. Fall?",
         },
             null,
             null,
@@ -143,7 +143,7 @@ public static class DialogTexts
         new Dialog(Constants.FERNSEHER,
             new List<string>
         {
-            "Sherlock Holmes ist noch nichts für dich."
+            "Sherlock Holmes ist noch nichts fï¿½r dich."
         },
             null,
             null,
@@ -170,7 +170,7 @@ public static class DialogTexts
         new Dialog(Constants.HOCKER,
             new List<string>
         {
-            "Auf ins nächste Abenteuer!",
+            "Auf ins nï¿½chste Abenteuer!",
         },
             null,
             null,
@@ -209,7 +209,7 @@ public static class DialogTexts
         new Dialog(Constants.KUEHLSCHRANK,
             new List<string>
         {
-            "Ich öffne mich",
+            "Ich ï¿½ffne mich",
         },
             null,
             null,
@@ -222,7 +222,7 @@ public static class DialogTexts
         new Dialog(Constants.KUEHLSCHRANK,
             new List<string>
         {
-            "Ich schließe mich.",
+            "Ich schlieï¿½e mich.",
         },
             null,
             null,
@@ -238,7 +238,7 @@ public static class DialogTexts
         new Dialog(Constants.LAPPE,
             new List<string>
         {
-            "Captain Blitzeblank schläft.",
+            "Captain Blitzeblank schlï¿½ft.",
         },
             null,
             null,
@@ -262,7 +262,7 @@ public static class DialogTexts
         new Dialog(Constants.MUELLEIMER,
             new List<string>
         {
-            "Dieser Kuchen war soooo lecker, hast du noch ein Stück?"
+            "Dieser Kuchen war soooo lecker, hast du noch ein Stï¿½ck?"
         },
             null,
             null,
@@ -274,7 +274,7 @@ public static class DialogTexts
         new Dialog(Constants.MUELLEIMER,
             new List<string>
         {
-            "Eigentlich muss ich ja auf meine Figur achten… Aber bei einem ganzen Kuchen, kann ich schwer Nein sagen."
+            "Eigentlich muss ich ja auf meine Figur achtenï¿½ Aber bei einem ganzen Kuchen, kann ich schwer Nein sagen."
         },
             null,
             null,
@@ -286,7 +286,7 @@ public static class DialogTexts
         new Dialog(Constants.MUELLEIMER,
             new List<string>
         {
-            "Ich frage mich warum sie</b> kein Stück wollte. Der sah ja auch gut aus."
+            "Ich frage mich warum sie</b> kein Stï¿½ck wollte. Der sah ja auch gut aus."
         },
             null,
             null,
@@ -301,8 +301,8 @@ public static class DialogTexts
          new Dialog(Constants.KIND,
             new List<string>
         {
-            "Meine Mutter ist getötet (",
-            "Das bedeutet, ich kann ein Detective Spiel anfange, yupiii!"
+            "Meine Mutter ist getï¿½tet worden (",
+            "Das bedeutet, ich kann endlich Detektive spielen, yupiii!"
         },
             null,
             null,
@@ -378,7 +378,7 @@ public static class DialogTexts
         new Dialog(Constants.PILLEN,
             new List<string>
         {
-            "5 VON UNS HAST DU BEREITS GEKLAUT UND <b>ERTRÄNKT</b>.",
+            "5 VON UNS HAST DU BEREITS GEKLAUT UND <b>ERTRï¿½NKT</b>.",
         },
             null,
             null,
@@ -390,7 +390,7 @@ public static class DialogTexts
         new Dialog(Constants.PILLEN,
             new List<string>
         {
-            "DU HAST SIE GETÖTET!",
+            "DU HAST SIE GETï¿½TET!",
         },
             null,
             null,
@@ -445,7 +445,7 @@ public static class DialogTexts
             new List<string>
         {
             "Ich bin geschlossen.",
-            "Aber wenn du den Schlüssel von mir findest, dann öffne ich dir alle Türe dieser Welt."
+            "Aber wenn du den Schlï¿½ssel von mir findest, dann ï¿½ffne ich dir alle Tï¿½re dieser Welt."
         },
             null,
             null,
@@ -491,8 +491,8 @@ public static class DialogTexts
         new Dialog(Constants.TOASTER,
             new List<string>
         {
-            "*Eugh, Hust*… Zu… *Hust* viele.. Krümell *Hust, Hust*.",
-            "Muss… *Urgh* <b>sauber…</b> *Hust* sein."
+            "*Eugh, Hust*ï¿½ Zuï¿½ *Hust* viele.. Krï¿½mell *Hust, Hust*.",
+            "Mussï¿½ *Urgh* <b>sauberï¿½</b> *Hust* sein."
         },
             new List<int>
             {
@@ -550,8 +550,8 @@ public static class DialogTexts
             "Pflanze 1: Jaja, die war gestern schon wieder hier.",
             "Pflanze 2: Ne, was wollt sie denn dieses Mal?",
             "Pflanze 3: Bestimmt wieder mit Papa reden.",
-            "Pflanze 1: Ne dieses mal hat sie einen Kuchen mitgebracht. Extra für Mama gebacken.",
-            "Pflanze 3: Ich dachte die hasst Mama…"
+            "Pflanze 1: Ne dieses mal hat sie einen Kuchen mitgebracht. Extra fï¿½r Mama gebacken.",
+            "Pflanze 3: Ich dachte die hasst Mamaï¿½"
         },
             null,
             null,
@@ -562,7 +562,7 @@ public static class DialogTexts
         new Dialog(Constants.VODKA,
             new List<string>
         {
-            "Ich schmeck dir doch eh nicht. Lass mich lieber Papa übrig"
+            "Ich schmeck dir doch eh nicht. Lass mich lieber Papa ï¿½brig"
         },
             null,
             null,
@@ -573,8 +573,8 @@ public static class DialogTexts
         new Dialog(Constants.WASCHMASCHINE,
             new List<string>
         {
-            "Grhnnnnn. Schneller……Ahhhhhhhh………",
-            "Schneeeeeeeelllllleeeeeeeeer…"
+            "Grhnnnnn. Schnellerï¿½ï¿½Ahhhhhhhhï¿½ï¿½ï¿½",
+            "Schneeeeeeeelllllleeeeeeeeerï¿½"
         },
             null,
             null,
@@ -582,7 +582,7 @@ public static class DialogTexts
         new Dialog(Constants.WASCHMASCHINE,
             new List<string>
         {
-            "Iiiiiiich… biiiiiiiiiin… baaaalld… feeeertiiiiiiiiiiiig"
+            "Iiiiiiichï¿½ biiiiiiiiiinï¿½ baaaalldï¿½ feeeertiiiiiiiiiiiig"
         },
             null,
             null,
@@ -590,7 +590,7 @@ public static class DialogTexts
         new Dialog(Constants.WASCHMASCHINE,
             new List<string>
         { 
-            "Weißt du? Auch wenn Oma manchmal etwas grausam zu Mama ist, ist sie doch viel zu <b>lieb</b> um etwas böses zu tun."
+            "Weiï¿½t du? Auch wenn Oma manchmal etwas grausam zu Mama ist, ist sie doch viel zu <b>lieb</b> um etwas bï¿½ses zu tun."
         },
             null,
             null,
@@ -661,8 +661,8 @@ public static class DialogTexts
         new Dialog(Constants.WASSERKOCHER,
             new List<string>
         {
-            "Ich finde deine Worte überflüssig.",
-            "Haha, verstanden? Überflüssig! Haha."
+            "Ich finde deine Worte ï¿½berflï¿½ssig.",
+            "Haha, verstanden? ï¿½berflï¿½ssig! Haha."
         },
             null,
             null,
@@ -693,7 +693,7 @@ public static class DialogTexts
         new Dialog(Constants.WASSERKOCHER, 
             new List<string>
         {
-            "Und wieder in deine Hände, wie süß!"
+            "Und wieder in deine Hï¿½nde, wie sï¿½ï¿½!"
         },
             null,
             null,
