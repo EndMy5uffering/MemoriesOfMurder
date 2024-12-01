@@ -21,6 +21,7 @@ public static class Constants
     public const string WASCHMASCHINE = "Waschmaschine";
     public const string WASSERHAHN = "Wasserhahn";
     public const string WASSERKOCHER = "Wasserkocher";
+    public const string SCHRANK = "Schrank";
 
     public const int BOOMBOX_INT = 0;
     public const int BUEGELEISEN_INT = 1;
@@ -39,4 +40,5 @@ public static class Constants
     public const int WASCHMASCHINE_INT = 14;
     public const int WASSERHAHN_INT = 15;
     public const int WASSERKOCHER_INT = 16;
+    public const int SCHRANK_INT = 17;
 }
