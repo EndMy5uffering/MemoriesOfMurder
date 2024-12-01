@@ -176,6 +176,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6862708937166300051}
   - component: {fileID: 2061929183861784627}
+  - component: {fileID: 8152940695012610276}
   m_Layer: 0
   m_Name: hocker
   m_TagString: Untagged
@@ -221,3 +222,15 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.9429898, y: 0.74621713, z: 1}
   m_Center: {x: -0.0018661022, y: 0.38121957, z: 0}
+--- !u!114 &8152940695012610276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7316392344846591797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad12238b50bdc4f41968c302a58d74b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
