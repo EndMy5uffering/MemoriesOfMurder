@@ -20,5 +20,6 @@ public class OnMotherDeathActivateAnimators : MonoBehaviour
     private void ActivateAnimator()
     {
         animator.enabled = true;
+        Destroy(this);
     }
 }
