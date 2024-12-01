@@ -13,6 +13,7 @@ public class SchrankNPC : NPC
 
     public void Open()
     {
-
+        if (animator != null)
+            animator.SetBool("isOpen", true);
     }
 }

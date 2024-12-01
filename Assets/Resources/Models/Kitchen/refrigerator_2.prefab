@@ -934,6 +934,7 @@ GameObject:
   - component: {fileID: 3264546006363204987}
   - component: {fileID: 6541917035100504931}
   - component: {fileID: 5770345115901856603}
+  - component: {fileID: 4427492339976796959}
   m_Layer: 0
   m_Name: refrigerator_2
   m_TagString: Untagged
@@ -1044,6 +1045,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f718f6f9db67b5f4e9ece25a84cc92e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &4427492339976796959
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6014593046184058736}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f517d6e0fa9d9fe4a9dc2e0a3a07a62b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &6032553883384138447
 GameObject:
   m_ObjectHideFlags: 0
