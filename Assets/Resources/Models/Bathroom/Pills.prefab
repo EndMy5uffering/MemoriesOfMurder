@@ -93,6 +93,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1970471528488949456}
   - component: {fileID: 3659398797837973600}
+  - component: {fileID: 3634585834277309254}
   m_Layer: 0
   m_Name: Pills
   m_TagString: Untagged
@@ -137,8 +138,29 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.34579086, y: 0.6, z: 0.3}
-  m_Center: {x: 0.0025348663, y: 0, z: 0}
+  m_Size: {x: 0.34579086, y: 0.48271328, z: 0.3}
+  m_Center: {x: 0.0025348663, y: 0.05864337, z: 0}
+--- !u!95 &3634585834277309254
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2712372561227704490}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4212ee18c6a3dd94497ff6ffa2ccb726, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &4682259110462267991
 GameObject:
   m_ObjectHideFlags: 0
