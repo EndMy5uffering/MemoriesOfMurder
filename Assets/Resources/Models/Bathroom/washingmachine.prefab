@@ -144,7 +144,7 @@ MeshRenderer:
   m_RenderingLayerMask: 257
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e687cbb4c50cd9840ba289368522b32c, type: 2}
+  - {fileID: 2100000, guid: fc57b84f069a7b242aafd413ee081389, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -310,7 +310,7 @@ MeshRenderer:
   m_RenderingLayerMask: 257
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e687cbb4c50cd9840ba289368522b32c, type: 2}
+  - {fileID: 2100000, guid: fc57b84f069a7b242aafd413ee081389, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -425,6 +425,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8016345305536742785}
   - component: {fileID: 1855490401374353311}
+  - component: {fileID: 8599195877509519877}
+  - component: {fileID: 4179785419072528569}
   m_Layer: 0
   m_Name: washingmachine
   m_TagString: Untagged
@@ -478,6 +480,39 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8599195877509519877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4305488787473956346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50fc7f1f75bae7d499f06227b4348511, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!95 &4179785419072528569
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4305488787473956346}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0dc8f953d6d8d2a47a69106bcc1d9567, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &5703408297481329951
 GameObject:
   m_ObjectHideFlags: 0
@@ -539,7 +574,7 @@ MeshRenderer:
   m_RenderingLayerMask: 257
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e687cbb4c50cd9840ba289368522b32c, type: 2}
+  - {fileID: 2100000, guid: fc57b84f069a7b242aafd413ee081389, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
