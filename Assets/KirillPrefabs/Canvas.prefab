@@ -528,6 +528,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1487134a4939f949ba2a225099d2f6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  clean: {fileID: 0}
+  toasterBody: {fileID: 0}
 --- !u!1 &1978663946817668181
 GameObject:
   m_ObjectHideFlags: 0
@@ -701,6 +703,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogWindow: {fileID: 7556238353799999066}
+  isDialogActive: 0
 --- !u!114 &4792555351702127998
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1181,7 +1184,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: ->
+  m_text: F
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

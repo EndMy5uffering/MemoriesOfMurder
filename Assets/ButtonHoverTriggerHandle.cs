@@ -22,6 +22,7 @@ public class ButtonHoverTriggerHandle : MonoBehaviour
 
     public void onButtonHoverEnter(BaseEventData bed)
     {
+        AudioManager.Instance.PlayButtonHoverSound();
         obj.SetActive(true);
     }
 

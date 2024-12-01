@@ -15,13 +15,14 @@ public class GameScene : MonoBehaviour
 
     private void Awake()
     {
-        onLeftClickEvent.AddListener(ContinueDialog);
         onInteractionWithNpcEvent.AddListener(StartDialog);
+        onLeftClickEvent.AddListener(ContinueDialog);
     }
 
     private void ContinueDialog()
     {
-        DialogManager.Instance.DisplayNextSentence();
+        if (DialogManager.Instance.isDialogActive)
+            DialogManager.Instance.DisplayNextSentence();
     }
 
     private void StartDialog(NPC npc)
