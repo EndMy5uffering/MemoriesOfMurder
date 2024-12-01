@@ -36,6 +36,11 @@ public class DialogManager : MonoBehaviour
                 curNpc = npc;
                 npc.SetAnimator(true);
 
+                if (npc.voiceIndex == 6)
+                {
+                    AudioManager.Instance.PlayOneShotFMOD3D("Boombox", GameObject.Find("tv").transform);
+                }
+
                 isDialogActive = true;
                 dialogWindow.gameObject.SetActive(true);
                 sentences.Clear();

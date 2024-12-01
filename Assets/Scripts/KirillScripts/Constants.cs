@@ -39,7 +39,7 @@ public static class Constants
     public const int TOASTER_INT = 2;
     public const int VASE_INT = 4;
     public const int VODKA_INT = 5;
-    public const int WASCHMASCHINE_INT = 6;
+    public const int WASCHMASCHINE_INT = 5;
     public const int WASSERHAHN_INT = 1;
     public const int WASSERKOCHER_INT = 4;
     public const int SCHRANK_INT = 5;
