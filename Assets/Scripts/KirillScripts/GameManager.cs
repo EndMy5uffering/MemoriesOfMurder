@@ -18,6 +18,8 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private LappeNPC lappe;
     [SerializeField]
+    private LeicheNPC leiche;
+    [SerializeField]
     private MuelleimerNPC muelleimer;
     [SerializeField]
     private OrangensaftNPC orangensaft;
@@ -97,6 +99,17 @@ public class GameManager : MonoBehaviour
                 kuehlschrank.ChangeState(npcStatePair.state);
                 break;
             case Constants.LAPPE:
+                lappe.ChangeState(npcStatePair.state);
+                break;
+            case Constants.LEICHE:
+                if (npcStatePair.state < 0)
+                {
+                    if (npcStatePair.state == -1)
+                    {
+                        if (OnMotherDeathActivateAnimators.OnMotherDeathDiscovered != null)
+                            OnMotherDeathActivateAnimators.OnMotherDeathDiscovered.Invoke();
+                    }
+                }
                 lappe.ChangeState(npcStatePair.state);
                 break;
             case Constants.MUELLEIMER:
