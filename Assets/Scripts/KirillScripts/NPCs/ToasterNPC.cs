@@ -10,4 +10,9 @@ public class ToasterNPC : NPC
         this.dialogs = DialogTexts.dialogsToaster;
         voiceIndex = Constants.TOASTER_INT;
     }
+    public void PlayCleanAnimation()
+    {
+        if (animator != null)
+            animator.SetBool("isClean", true);
+    }
 }

@@ -17,7 +17,7 @@ public static class DialogTexts
             new List<NpcStatePair>
             {
                 new NpcStatePair(Constants.BOOMBOX, 1),
-                new NpcStatePair(Constants.BOOMBOX, -1)
+                //new NpcStatePair(Constants.BOOMBOX, -1)
             }
             ),
          new Dialog(Constants.BOOMBOX,
@@ -72,7 +72,8 @@ public static class DialogTexts
             null,
             new List<NpcStatePair>
             {
-                new NpcStatePair(Constants.BUEGELEISEN, 1)
+                new NpcStatePair(Constants.BUEGELEISEN, 1),
+                new NpcStatePair(Constants.WASSERKOCHER, 1)
             }
             ),
         new Dialog(Constants.BUEGELEISEN,
@@ -98,7 +99,8 @@ public static class DialogTexts
             },
             new List<NpcStatePair>
             {
-                new NpcStatePair(Constants.BUEGELEISEN, 3)
+                new NpcStatePair(Constants.BUEGELEISEN, 3),
+                new NpcStatePair(Constants.WASSERKOCHER, -3)
             }
             ),
         new Dialog(Constants.BUEGELEISEN,
@@ -213,7 +215,8 @@ public static class DialogTexts
             null,
             new List<NpcStatePair>
             {
-                new NpcStatePair(Constants.KUEHLSCHRANK, 1)
+                new NpcStatePair(Constants.KUEHLSCHRANK, 1),
+                new NpcStatePair(Constants.KUEHLSCHRANK, -1)
             }
             ),
         new Dialog(Constants.KUEHLSCHRANK,
@@ -225,7 +228,8 @@ public static class DialogTexts
             null,
             new List<NpcStatePair>
             {
-                new NpcStatePair(Constants.KUEHLSCHRANK, 0)
+                new NpcStatePair(Constants.KUEHLSCHRANK, 0),
+                new NpcStatePair(Constants.KUEHLSCHRANK, -2)
             }
             ),
     };
@@ -381,7 +385,7 @@ public static class DialogTexts
             }
             ),
     };
-    public static Dialog[] dialogsSchluessel = new Dialog[1]
+    public static Dialog[] dialogsSchluessel = new Dialog[2]
     {
         new Dialog(Constants.SCHLUESSEL,
             new List<string>
@@ -391,9 +395,58 @@ public static class DialogTexts
         },
             null,
             null,
+            new List<NpcStatePair>
+            {
+                new NpcStatePair(Constants.SCHLUESSEL, -1),
+                new NpcStatePair(Constants.SCHLUESSEL, 1),
+                new NpcStatePair(Constants.SCHRANK, 1)
+            }
+            ),
+        new Dialog(Constants.SCHLUESSEL,
+            new List<string>
+        {
+
+        },
+            null,
+            null,
+            null
+            )
+    };
+    public static Dialog[] dialogsSchrank = new Dialog[3]
+   {
+        new Dialog(Constants.SCHRANK,
+            new List<string>
+        {
+            "Ich bin geschlossen.",
+            "Aber wenn du den Schlüssel von mir findest, dann öffne ich dir alle Türe dieser Welt."
+        },
+            null,
+            null,
             null
             ),
-    };
+        new Dialog(Constants.SCHRANK,
+            new List<string>
+        {
+            "YES, DADDY!!",
+        },
+            null,
+            null,
+            new List<NpcStatePair>
+            {
+                new NpcStatePair(Constants.SCHRANK, 2),
+                new NpcStatePair(Constants.SCHRANK, -1)
+            }
+            ),
+       new Dialog(Constants.SCHRANK,
+            new List<string>
+        {
+            "Mhm...",
+        },
+            null,
+            null,
+            null
+            ),
+   };
     public static Dialog[] dialogsTeekanne = new Dialog[1]
     {
         new Dialog(Constants.TEEKANNE,
@@ -446,8 +499,9 @@ public static class DialogTexts
                 0
             },
             new List<NpcStatePair>
-            {
+            { 
                 new NpcStatePair (Constants.TOASTER, 3),
+                new NpcStatePair (Constants.TOASTER, -1) //set isClean true
             }),
         new Dialog(Constants.TOASTER,
             new List<string>
@@ -487,7 +541,7 @@ public static class DialogTexts
             null,
             null)
     };
-    public static Dialog[] dialogsWaschmaschine = new Dialog[5]
+    public static Dialog[] dialogsWaschmaschine = new Dialog[3]
     {
         new Dialog(Constants.WASCHMASCHINE,
             new List<string>
@@ -508,38 +562,14 @@ public static class DialogTexts
             null),
         new Dialog(Constants.WASCHMASCHINE,
             new List<string>
-        {
+        { 
             "Weißt du? Auch wenn Oma manchmal etwas grausam zu Mama ist, ist sie doch viel zu <b>lieb</b> um etwas böses zu tun."
-        },
-            null,
-            null,
-            new List<NpcStatePair>
-            {
-                new NpcStatePair (Constants.WASCHMASCHINE, 3),
-            }),
-        new Dialog(Constants.WASCHMASCHINE,
-            new List<string>
-        {
-
-        },
-            null,
-            null,
-            new List<NpcStatePair>
-            {
-                // Here Action for Schluessel
-
-                new NpcStatePair (Constants.WASCHMASCHINE, 4),
-            }),
-        new Dialog(Constants.WASCHMASCHINE,
-            new List<string>
-        {
-            "Gib mir Zeit zum Relaxen. Ich bin völlig erschöpft."
         },
             null,
             null,
             null)
     };
-    public static Dialog[] dialogsWasserhahn = new Dialog[2]
+    public static Dialog[] dialogsWasserhahn = new Dialog[4]
     {
         new Dialog(Constants.WASSERHAHN,
             new List<string>
@@ -553,11 +583,12 @@ public static class DialogTexts
                 // Here Action for Wasser Aufmachen
 
                 new NpcStatePair (Constants.WASSERHAHN, 1),
+                new NpcStatePair (Constants.WASSERHAHN, -1),
             }),
         new Dialog(Constants.WASSERHAHN,
             new List<string>
         {
-            "Ohhh, jaaaa. Das tut gut."
+            "Nein. Nein. Nein, warte! Ich bin noch nicht fertig."
         },
             null,
             null,
@@ -566,10 +597,94 @@ public static class DialogTexts
                 // Here Action for Wasser Ausmachen
 
                 new NpcStatePair (Constants.WASSERHAHN, 0),
+                new NpcStatePair (Constants.WASSERHAHN, -2),
+            }),
+        new Dialog(Constants.WASSERHAHN,
+            new List<string>
+        {
+
+        },
+            null,
+            null,
+            new List<NpcStatePair>
+            {
+                // Here Action for Wasser Ausmachen
+                new NpcStatePair (Constants.WASSERKOCHER, -2),
+                new NpcStatePair (Constants.WASSERHAHN, 3),
+                new NpcStatePair (Constants.WASSERHAHN, -2),
+            }),
+        new Dialog(Constants.WASSERHAHN,
+            new List<string>
+        {
+
+        },
+            null,
+            null,
+            new List<NpcStatePair>
+            {
+                // Here Action for Wasser Ausmachen
+                //new NpcStatePair (Constants.WASSERKOCHER, 3),
+                new NpcStatePair (Constants.WASSERHAHN, 1),
+                new NpcStatePair (Constants.WASSERHAHN, -1),
+                new NpcStatePair (Constants.WASSERKOCHER, -4)
             })
     };
-    public static Dialog[] dialogsWasserkocher = new Dialog[0]
-{
+    public static Dialog[] dialogsWasserkocher = new Dialog[5]
+    {
+        new Dialog(Constants.WASSERKOCHER,
+            new List<string>
+        {
+            "Ich finde deine Worte überflüssig.",
+            "Haha, verstanden? Überflüssig! Haha."
+        },
+            null,
+            null,
+            null
+            ),
+        new Dialog(Constants.WASSERKOCHER,
+            new List<string>
+        {
+            "Willst du dir wieder einen Tee machen?"
+        },
+            null,
+            null,
+            new List<NpcStatePair>
+            {
+                // Wasserhahn bereitstellen
+                new NpcStatePair (Constants.WASSERHAHN, 2),
+                new NpcStatePair (Constants.WASSERKOCHER, -1),
+                new NpcStatePair (Constants.WASSERKOCHER, 2)
+            }),
+        new Dialog(Constants.WASSERKOCHER,
+            new List<string>
+        {
 
-};
+        },
+            null,
+            null,
+            null),
+        new Dialog(Constants.WASSERKOCHER, 
+            new List<string>
+        {
+            "Und wieder in deine Hände, wie süß!"
+        },
+            null,
+            null,
+            new List<NpcStatePair>
+            {
+                // Wasserhahn bereitstellen
+                new NpcStatePair (Constants.WASSERKOCHER, -1),
+                new NpcStatePair (Constants.WASSERKOCHER, 4),
+                new NpcStatePair (Constants.BUEGELEISEN, 2)
+            }),
+        new Dialog(Constants.WASSERKOCHER,
+            new List<string>
+        {
+
+        },
+            null,
+            null,
+            null
+            ),
+    };
 }
