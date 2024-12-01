@@ -7,19 +7,16 @@ using UnityEngine.Events;
 public class OnMotherDeathActivateAnimators : MonoBehaviour
 {
     public static UnityEvent OnMotherDeathDiscovered;
-
     private Animator animator;
-    // Start is called before the first frame update
     void Start()
     {
         OnMotherDeathDiscovered.AddListener(ActivateAnimator);
         animator = GetComponent<Animator>();
     }
-    
-    
     private void ActivateAnimator()
     {
         animator.enabled = true;
         Destroy(this);
+        OnMotherDeathDiscovered.RemoveListener(ActivateAnimator);
     }
 }
