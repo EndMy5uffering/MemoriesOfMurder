@@ -1000,7 +1000,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   underlineImage: {fileID: 1943140134}
-  startMenu: 1
+  startMenu: 0
 --- !u!114 &939105836
 MonoBehaviour:
   m_ObjectHideFlags: 0

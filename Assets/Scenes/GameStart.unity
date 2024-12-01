@@ -546,8 +546,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b735897ed2027844987d569af2e856ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GameScene: 2
-  CreditScene: 5
+  GameScene: 1
+  CreditScene: 4
 --- !u!1 &277188992
 GameObject:
   m_ObjectHideFlags: 0

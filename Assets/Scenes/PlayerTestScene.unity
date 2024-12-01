@@ -3542,6 +3542,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7436315335465091846, guid: 4b23a2969c17c99499b3a89e5a28fa82,
         type: 3}
+      propertyPath: mainMenuScene
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7436315335465091846, guid: 4b23a2969c17c99499b3a89e5a28fa82,
+        type: 3}
       propertyPath: playerController
       value: 
       objectReference: {fileID: 968045302}
