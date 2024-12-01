@@ -254,6 +254,7 @@ public static class DialogTexts
             {
                 new NpcStatePair(Constants.TOASTER, 2),
                 new NpcStatePair(Constants.LAPPE, 0),
+                new NpcStatePair(Constants.LAPPE, -1),
             })
 };
     public static Dialog[] dialogsMuelleimer = new Dialog[3]
@@ -294,6 +295,32 @@ public static class DialogTexts
                 new NpcStatePair(Constants.MUELLEIMER, 0),
             }
             )
+    };
+    public static Dialog[] dialogsLeiche = new Dialog[2]
+    {
+         new Dialog(Constants.KIND,
+            new List<string>
+        {
+            "Meine Mutter ist getötet (",
+            "Das bedeutet, ich kann ein Detective Spiel anfange, yupiii!"
+        },
+            null,
+            null,
+            new List<NpcStatePair>
+            {
+                new NpcStatePair(Constants.LEICHE, 1),
+                new NpcStatePair(Constants.LEICHE, -1)
+            }
+            ),
+         new Dialog(Constants.LEICHE,
+            new List<string>
+        {
+            "...",
+        },
+            null,
+            null,
+            null
+            ),
     };
     public static Dialog[] dialogsOrangensaft = new Dialog[2]
 {

@@ -498,6 +498,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3943907731377097077}
   - component: {fileID: 4313714328604460991}
+  - component: {fileID: 8141028582356685050}
   m_Layer: 0
   m_Name: iron
   m_TagString: Untagged
@@ -529,7 +530,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5810147972882479059}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 1558cf9290f64d742b9c46d32d4f9618, type: 2}
   m_CullingMode: 0
@@ -542,6 +543,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &8141028582356685050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5810147972882479059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 613aea8fe9a855545b14d27464845e2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6870793164846982438
 GameObject:
   m_ObjectHideFlags: 0
