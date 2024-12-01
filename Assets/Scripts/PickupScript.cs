@@ -26,12 +26,24 @@ public class PickupScript : MonoBehaviour
             if(isSame) return;
         }
 
+        Quaternion offsetRot = Quaternion.identity;
+        Vector3 offsetPos = Vector3.zero;
+
+        if(obj.GetComponent<Pickable>() != null)
+        {
+            if(obj.GetComponent<Pickable>().offset != null)
+            {
+                offsetRot = obj.GetComponent<Pickable>().offset.localRotation;
+                offsetPos = obj.GetComponent<Pickable>().offset.localPosition;
+            }
+        }
+
         prevLayer = obj.layer;
         prevParent = obj.transform.parent;
         obj.layer = LayerMask.NameToLayer("Picked");
         obj.transform.parent = hand;
-        obj.transform.rotation = hand.rotation;
-        obj.transform.position = hand.position;
+        obj.transform.rotation = hand.rotation * Quaternion.Inverse(offsetRot);
+        obj.transform.position = hand.position - offsetPos;
         pickedItem = obj;
         Rigidbody rb = obj.GetComponent<Rigidbody>();
         hadRigidbody = rb != null;
