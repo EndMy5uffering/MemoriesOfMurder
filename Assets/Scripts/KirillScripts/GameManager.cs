@@ -45,8 +45,8 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
     // Start is called before the first frame update
 
-    UnityEvent<bool> onTakeWasserkocherEvent = new UnityEvent<bool>();
-    UnityEvent<bool> onTakeKeyEvent = new UnityEvent<bool>();
+    public UnityEvent<bool> onTakeWasserkocherEvent = new UnityEvent<bool>();
+    public UnityEvent<bool> onTakeKeyEvent = new UnityEvent<bool>();
 
     private void Awake()
     {
