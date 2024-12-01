@@ -53,22 +53,17 @@ public class DialogManager : MonoBehaviour
 
     public void DisplayNextSentence()
     {
-        if (!isDialogActive)
-        {
-            Debug.LogError("There is no dialog active, but you try to coninue the dialog!");
-        }
-        else
-        {
-            if (sentences.Count == 0)
-            {
-                EndDialog();
-                return;
-            }
+        if (!isDialogActive) return;
 
-            string sentence = sentences.Dequeue();
-            dialogWindow.SetMessage(sentence);
-            curNpc.PlaySound();
+        if (sentences.Count == 0)
+        {
+            EndDialog();
+            return;
         }
+
+        string sentence = sentences.Dequeue();
+        dialogWindow.SetMessage(sentence);
+        curNpc.PlaySound();
     }
 
     private void EndDialog()
