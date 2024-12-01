@@ -547,6 +547,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GameScene: 2
+  CreditScene: 5
 --- !u!1 &277188992
 GameObject:
   m_ObjectHideFlags: 0
