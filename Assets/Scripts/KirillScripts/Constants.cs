@@ -22,6 +22,8 @@ public static class Constants
     public const string WASSERHAHN = "Wasserhahn";
     public const string WASSERKOCHER = "Wasserkocher";
     public const string SCHRANK = "Schrank";
+    public const string LEICHE = "Leiche";
+    public const string KIND = "Ich";
 
     public const int BOOMBOX_INT = 0;
     public const int BUEGELEISEN_INT = 1;
