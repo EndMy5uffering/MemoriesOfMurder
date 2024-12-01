@@ -6,7 +6,7 @@ using UnityEngine.Events;
 [RequireComponent(typeof(Animator))]
 public class OnMotherDeathActivateAnimators : MonoBehaviour
 {
-    public static UnityEvent OnMotherDeathDiscovered;
+    public static UnityEvent OnMotherDeathDiscovered = new();
     private Animator animator;
     void Start()
     {

@@ -180,6 +180,7 @@ GameObject:
   - component: {fileID: 5570479549257935099}
   - component: {fileID: 9096911723429270166}
   - component: {fileID: 7254225851183317778}
+  - component: {fileID: 3910599822503095936}
   m_Layer: 0
   m_Name: trash_Small
   m_TagString: Untagged
@@ -283,7 +284,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9124275910999713817}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 1f515d888f366034480036ec44b95152, type: 2}
   m_CullingMode: 0
@@ -306,5 +307,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4669158ab107083498f8aea42aa1e884, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3910599822503095936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9124275910999713817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 613aea8fe9a855545b14d27464845e2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

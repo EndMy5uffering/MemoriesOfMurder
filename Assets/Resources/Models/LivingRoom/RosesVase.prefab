@@ -586,6 +586,7 @@ GameObject:
   - component: {fileID: 4807311555196632965}
   - component: {fileID: 202669518115259732}
   - component: {fileID: 4821102871169547940}
+  - component: {fileID: -7342998047456686650}
   m_Layer: 0
   m_Name: RosesVase
   m_TagString: Untagged
@@ -621,7 +622,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2989764134545323766}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: bde36f1405b8d98428d88b5fbcb02753, type: 2}
   m_CullingMode: 0
@@ -665,6 +666,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 16fec5a0812c7474ea352961589b283d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-7342998047456686650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2989764134545323766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 613aea8fe9a855545b14d27464845e2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &3021285701169187161
