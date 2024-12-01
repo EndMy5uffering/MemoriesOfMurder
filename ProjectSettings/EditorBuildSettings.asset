@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/FinalScreenEvil.unity
     guid: d7d956fda7b7f564b8d14989e2fbebe5
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: 923299fe73104474282751801caf2453
   m_configObjects: {}
