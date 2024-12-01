@@ -10,4 +10,14 @@ public class KuehlschrankNPC : NPC
         this.dialogs = DialogTexts.dialogsKuehlschrank;
         voiceIndex = Constants.KUEHLSCHRANK_INT;
     }
+
+    public void Open()
+    {
+        //anim
+    }
+
+    public void Close()
+    {
+        //anim
+    }
 }

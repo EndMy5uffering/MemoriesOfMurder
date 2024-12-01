@@ -94,6 +94,7 @@ GameObject:
   - component: {fileID: 4723813611871024948}
   - component: {fileID: 1932890346886999422}
   - component: {fileID: 2350221161210521857}
+  - component: {fileID: 8106318595525551994}
   m_Layer: 0
   m_Name: Wodka
   m_TagString: Untagged
@@ -169,6 +170,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &8106318595525551994
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3215242177463776957}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.46200004, y: 1.4424295, z: 0.46200004}
+  m_Center: {x: 0, y: 0.7212148, z: 0}
 --- !u!1 &3698257452119654983
 GameObject:
   m_ObjectHideFlags: 0

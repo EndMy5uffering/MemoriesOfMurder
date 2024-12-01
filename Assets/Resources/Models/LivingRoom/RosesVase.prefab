@@ -584,6 +584,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8360606982284547753}
   - component: {fileID: 4807311555196632965}
+  - component: {fileID: 202669518115259732}
   m_Layer: 0
   m_Name: RosesVase
   m_TagString: Untagged
@@ -632,6 +633,27 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!65 &202669518115259732
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2989764134545323766}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.5048647, y: 4.0032096, z: 1.5806913}
+  m_Center: {x: 0.010144711, y: 2.1118262, z: 0.203197}
 --- !u!1 &3021285701169187161
 GameObject:
   m_ObjectHideFlags: 0

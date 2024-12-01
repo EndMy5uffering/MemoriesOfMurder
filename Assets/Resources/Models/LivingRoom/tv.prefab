@@ -336,6 +336,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9139359175417220871}
   - component: {fileID: 970362890333778848}
+  - component: {fileID: 5453847975174017742}
   m_Layer: 0
   m_Name: tv
   m_TagString: Untagged
@@ -387,6 +388,27 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!65 &5453847975174017742
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3425247575568889424}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.0637722, y: 1.6928114, z: 1.8780346}
+  m_Center: {x: -0.006381035, y: 1.3346064, z: -0.14274645}
 --- !u!1 &3967205091205193882
 GameObject:
   m_ObjectHideFlags: 0

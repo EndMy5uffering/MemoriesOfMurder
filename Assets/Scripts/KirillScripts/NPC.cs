@@ -7,7 +7,7 @@ public abstract class NPC : MonoBehaviour // Inheritance of MonoBehaviour here o
     protected int STATE_AMOUNT;
     protected Dialog[] dialogs;
     private int state = 0;
-    private Animator animator;
+    protected Animator animator;
     protected int voiceIndex = -1;
 
     private void Awake()
