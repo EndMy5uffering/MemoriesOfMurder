@@ -178,6 +178,8 @@ GameObject:
   - component: {fileID: 1230575138235681226}
   - component: {fileID: 3089194416884760790}
   - component: {fileID: 5570479549257935099}
+  - component: {fileID: 9096911723429270166}
+  - component: {fileID: 7254225851183317778}
   m_Layer: 0
   m_Name: trash_Small
   m_TagString: Untagged
@@ -273,3 +275,36 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.3052477, y: 1.7420772, z: 1.2854183}
   m_Center: {x: 0.00000011920929, y: 0.8710385, z: 0.000000029802322}
+--- !u!95 &9096911723429270166
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9124275910999713817}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1f515d888f366034480036ec44b95152, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &7254225851183317778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9124275910999713817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4669158ab107083498f8aea42aa1e884, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
