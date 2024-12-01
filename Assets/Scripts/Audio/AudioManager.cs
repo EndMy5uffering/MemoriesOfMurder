@@ -12,6 +12,7 @@ public class AudioManager : Singleton<AudioManager>
     private FMOD.Studio.EventInstance _endingEvent2;
 
     public AudioClip buttonClickClip;
+    public AudioClip buttonHoverClip;
 
     private AudioSource source;
 
@@ -114,7 +115,12 @@ public class AudioManager : Singleton<AudioManager>
 
     public void PlayButtonClickSound()
     {
-        source.PlayOneShot(buttonClickClip, 0.1f);
+        source.PlayOneShot(buttonClickClip, 0.08f);
+    }
+
+    public void PlayButtonHoverSound()
+    {
+        source.PlayOneShot(buttonHoverClip, 0.03f);
     }
 
     private IEnumerator ToGame()

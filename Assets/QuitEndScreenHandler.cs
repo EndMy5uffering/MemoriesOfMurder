@@ -12,6 +12,7 @@ public class QuitEndScreenHandler : MonoBehaviour
 
     public void OnQuitToEndScreen()
     {
+        AudioManager.Instance.PlayButtonClickSound();
         SceneManager.LoadScene(MainMenuID);
     }
 

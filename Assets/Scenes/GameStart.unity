@@ -3203,6 +3203,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7447890882454671212, guid: 1f04009fb7c3a1e48914d05c83feb39a,
+        type: 3}
+      propertyPath: buttonHoverClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 8971ea8abc31cfb49bda8bb27e0a6e8c, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
