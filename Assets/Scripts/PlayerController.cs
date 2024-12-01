@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour
     private float rotationX = 0.0f;
 
     public float rayDistance = 10;
-    
+
     public Camera cam;
     float time = 0;
 
@@ -58,9 +58,16 @@ public class PlayerController : MonoBehaviour
 
         HandleMovement();
         HandleRotation();
-        if(Input.GetKeyDown(KeyCode.E)) HandleInteraction();
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            HandleInteraction();
+        }
 
-        if(Input.GetMouseButtonDown(0)) GameScene.onLeftClickEvent?.Invoke();
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            GameScene.onLeftClickEvent?.Invoke();
+        }
+
 
     }
 
@@ -132,7 +139,7 @@ public class PlayerController : MonoBehaviour
 
     void OnDrawGizmos()
     {
-        Gizmos.DrawLine(cam.transform.position, cam.transform.position + cam.transform.forward * rayDistance);        
+        Gizmos.DrawLine(cam.transform.position, cam.transform.position + cam.transform.forward * rayDistance);
     }
 
     void HandleMovement()
@@ -149,18 +156,19 @@ public class PlayerController : MonoBehaviour
             if (Input.GetButton("Jump"))
             {
                 moveDirection.y = jumpSpeed;
+                AudioManager.Instance.PlayOneShotFMOD2D("Jump");
             }
 
             if(moveDirection.magnitude > 0) HeadWoble();
 
         }
-  
+
         // Apply gravity
         moveDirection.y -= gravity * Time.deltaTime;
 
         // Move the controller
         characterController.Move(moveDirection * Time.deltaTime);
-        
+
     }
 
     void HandleRotation()
@@ -178,7 +186,19 @@ public class PlayerController : MonoBehaviour
     private void HeadWoble()
     {
         cam.transform.localPosition = new Vector3(cam.transform.localPosition.x, Mathf.Lerp(initHeadY-0.02f, initHeadY + 0.02f, headBob.Evaluate(0.5f * (math.sin(time)+1.0f))), cam.transform.localPosition.z);
+        float oldTime = time;
         time += Time.deltaTime*bobingspeed;
-        if(time > Math.PI*2) time = 0;
+        if (time > Math.PI * 2)
+        {
+            time = 0;
+            AudioManager.Instance.PlayOneShotFMOD2D("Footstep");
+        }
+
+        if (time > Math.PI && oldTime < Math.PI)
+        {
+            AudioManager.Instance.PlayOneShotFMOD2D("Footstep");
+        }
+
+
     }
 }

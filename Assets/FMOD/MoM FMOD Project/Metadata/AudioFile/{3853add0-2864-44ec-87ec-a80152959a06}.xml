@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{3853add0-2864-44ec-87ec-a80152959a06}">
+		<property name="assetPath">
+			<value>VoiceSFX - 0004 - Instrument - Massive X 01 (D).wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.96297916666666672</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{8da09776-7ea6-46d1-8b79-16cc6e95e7d1}</destination>
+		</relationship>
+	</object>
+</objects>
