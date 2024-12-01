@@ -254,6 +254,7 @@ public static class DialogTexts
             {
                 new NpcStatePair(Constants.TOASTER, 2),
                 new NpcStatePair(Constants.LAPPE, 0),
+                new NpcStatePair(Constants.LAPPE, -1),
             })
 };
     public static Dialog[] dialogsMuelleimer = new Dialog[3]
