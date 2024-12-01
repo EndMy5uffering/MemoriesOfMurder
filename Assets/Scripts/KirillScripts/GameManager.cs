@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class GameManager : MonoBehaviour
 {
@@ -25,6 +26,8 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private SchluesselNPC schluessel;
     [SerializeField]
+    private SchrankNPC schrank;
+    [SerializeField]
     private TeekanneNPC teekanne;
     [SerializeField]
     private ToasterNPC toaster;
@@ -41,6 +44,9 @@ public class GameManager : MonoBehaviour
 
     public static GameManager Instance;
     // Start is called before the first frame update
+
+    public UnityEvent<bool> onTakeWasserkocherEvent = new UnityEvent<bool>();
+    public UnityEvent<bool> onTakeKeyEvent = new UnityEvent<bool>();
 
     private void Awake()
     {
@@ -81,6 +87,13 @@ public class GameManager : MonoBehaviour
                 hocker.ChangeState(npcStatePair.state);
                 break;
             case Constants.KUEHLSCHRANK:
+                if (npcStatePair.state < 0)
+                {
+                    if (npcStatePair.state == -1)
+                        kuehlschrank.Open();
+                    if (npcStatePair.state == -2)
+                        kuehlschrank.Close();
+                }
                 kuehlschrank.ChangeState(npcStatePair.state);
                 break;
             case Constants.LAPPE:
@@ -96,13 +109,36 @@ public class GameManager : MonoBehaviour
                 pillen.ChangeState(npcStatePair.state);
                 break;
             case Constants.SCHLUESSEL:
-                schluessel.ChangeState(npcStatePair.state);
+                if (npcStatePair.state < 0)
+                {
+                    if (npcStatePair.state == -1)
+                        onTakeKeyEvent.Invoke(true);
+                    if (npcStatePair.state == -2)
+                        Destroy(schluessel.gameObject);
+                }
+                else
+                    schluessel.ChangeState(npcStatePair.state);
+                break;
+            case Constants.SCHRANK:
+                if (npcStatePair.state < 0)
+                {
+                    if (npcStatePair.state == -1)
+                        schrank.Open();
+                }
+                else
+                    schrank.ChangeState(npcStatePair.state);
                 break;
             case Constants.TEEKANNE:
                 teekanne.ChangeState(npcStatePair.state);
                 break;
             case Constants.TOASTER:
-                toaster.ChangeState(npcStatePair.state);
+                if (npcStatePair.state < 0)
+                {
+                    if (npcStatePair.state != -1)
+                        toaster.PlayCleanAnimation();
+                }
+                else
+                    toaster.ChangeState(npcStatePair.state);
                 break;
             case Constants.VASE:
                 vase.ChangeState(npcStatePair.state);
@@ -111,13 +147,42 @@ public class GameManager : MonoBehaviour
                 vodka.ChangeState(npcStatePair.state);
                 break;
             case Constants.WASCHMASCHINE:
-                waschmaschine.ChangeState(npcStatePair.state);
+                if (npcStatePair.state < 0)
+                {
+                    if (npcStatePair.state == -1)
+                        waschmaschine.IncrementTask();
+                }
+                else
+                    waschmaschine.ChangeState(npcStatePair.state);
                 break;
             case Constants.WASSERHAHN:
-                wasserhahn.ChangeState(npcStatePair.state);
+                if (npcStatePair.state < 0)
+                {
+                    if (npcStatePair.state == -1)
+                        wasserhahn.WasserhahnOn(true);
+                    if (npcStatePair.state == -2)
+                        wasserhahn.WasserhahnOn(false);
+                }
+                else
+                    wasserhahn.ChangeState(npcStatePair.state);
                 break;
             case Constants.WASSERKOCHER:
-                wasserkocher.ChangeState(npcStatePair.state);
+                if (npcStatePair.state < 0)
+                {
+                    if (npcStatePair.state == -1)
+                        onTakeWasserkocherEvent.Invoke(true);
+                    if (npcStatePair.state == -2)
+                    {
+                        wasserkocher.PlayOpenWasserkocher();
+                        onTakeWasserkocherEvent.Invoke(false);
+                    }
+                    if (npcStatePair.state == -3)
+                        Destroy(wasserkocher.gameObject);
+                    if (npcStatePair.state == -4)
+                        wasserkocher.PlayWasserkocherWirdGefuellt();
+                }
+                else
+                    wasserkocher.ChangeState(npcStatePair.state);
                 break;
             default:
                 break;

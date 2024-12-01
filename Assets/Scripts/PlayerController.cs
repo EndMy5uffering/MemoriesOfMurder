@@ -31,6 +31,9 @@ public class PlayerController : MonoBehaviour
     public bool exitMenuOpen = false;
     public GameObject exitMenu;
 
+    public GameObject tabUI;
+    public bool tabOpen = false;
+
     void Awake()
     {
         picker = GetComponent<PickupScript>();
@@ -47,6 +50,22 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        if(exitMenuOpen || tabOpen) Cursor.lockState = CursorLockMode.None;
+
+        if(HandleEscUI()) return;
+
+        if(HandleTabUI()) return;
+
+        HandleMovement();
+        HandleRotation();
+        if(Input.GetKeyDown(KeyCode.E)) HandleInteraction();
+
+        if(Input.GetMouseButtonDown(0)) GameScene.onLeftClickEvent?.Invoke();
+
+    }
+
+    public bool HandleEscUI()
+    {
         if(Input.GetKeyDown(KeyCode.Escape)) 
         {
             exitMenu.SetActive(!exitMenuOpen);
@@ -62,14 +81,28 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        if(exitMenuOpen) return;
+        return exitMenuOpen;
+    }
 
-        HandleMovement();
-        HandleRotation();
-        if(Input.GetKeyDown(KeyCode.E)) HandleInteraction();
+    public bool HandleTabUI()
+    {
+        if(Input.GetKeyDown(KeyCode.Tab))
+        {
+            tabUI.SetActive(!tabOpen);
+            if(tabOpen)
+            {
+                tabOpen = false;
+                Cursor.lockState = CursorLockMode.Locked;
+            }
+            else
+            {
+                tabOpen = true;
+                Cursor.lockState = CursorLockMode.None;
+            }
+        }
 
-        if(Input.GetMouseButtonDown(0)) GameScene.onLeftClickEvent?.Invoke();
 
+        return tabOpen;
     }
 
     private void HandleInteraction()
@@ -80,6 +113,7 @@ public class PlayerController : MonoBehaviour
         if (Physics.Raycast(ray, out hit, rayDistance))
         {
             GameObject obj = hit.transform.gameObject;
+            Debug.Log(obj);
             if(obj.tag == "Pickable")
             {
                 onInteraction?.Invoke(obj);

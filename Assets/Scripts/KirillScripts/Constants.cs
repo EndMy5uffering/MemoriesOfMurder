@@ -5,15 +5,15 @@ using UnityEngine;
 public static class Constants
 {
     public const string BOOMBOX = "Boombox";
-    public const string BUEGELEISEN = "Bügeleisen";
+    public const string BUEGELEISEN = "Bï¿½geleisen";
     public const string FERNSEHER = "Fernseher";
     public const string HOCKER = "Hocker";
-    public const string KUEHLSCHRANK = "Kühlschrank";
+    public const string KUEHLSCHRANK = "Kï¿½hlschrank";
     public const string LAPPE = "Lappen";
-    public const string MUELLEIMER = "Mülleimer";
+    public const string MUELLEIMER = "Mï¿½lleimer";
     public const string ORANGENSAFT = "Orangensaft";
     public const string PILLEN = "Pillen";
-    public const string SCHLUESSEL = "Schlüssel";
+    public const string SCHLUESSEL = "Schlï¿½ssel";
     public const string TEEKANNE = "Teekanne";
     public const string TOASTER = "Toaster";
     public const string VASE = "Vase";
@@ -21,6 +21,7 @@ public static class Constants
     public const string WASCHMASCHINE = "Waschmaschine";
     public const string WASSERHAHN = "Wasserhahn";
     public const string WASSERKOCHER = "Wasserkocher";
+    public const string SCHRANK = "Schrank";
 
     public const int BOOMBOX_INT = 6;
     public const int BUEGELEISEN_INT = 1;
@@ -39,4 +40,5 @@ public static class Constants
     public const int WASCHMASCHINE_INT = 6;
     public const int WASSERHAHN_INT = 1;
     public const int WASSERKOCHER_INT = 4;
+    public const int WASSERKOCHER_INT = 5;
 }

@@ -10,4 +10,16 @@ public class KuehlschrankNPC : NPC
         this.dialogs = DialogTexts.dialogsKuehlschrank;
         voiceIndex = Constants.KUEHLSCHRANK_INT;
     }
+
+    public void Open()
+    {
+        if (animator != null)
+            animator.SetBool("isOpen", true);
+    }
+
+    public void Close()
+    {
+        if (animator != null)
+            animator.SetBool("isOpen", false);
+    }
 }
