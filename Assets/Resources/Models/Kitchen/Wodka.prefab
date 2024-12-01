@@ -97,6 +97,7 @@ GameObject:
   - component: {fileID: 8106318595525551994}
   - component: {fileID: 7142851067413671883}
   - component: {fileID: 8939733349833280672}
+  - component: {fileID: 4179885114037183859}
   m_Layer: 0
   m_Name: Wodka
   m_TagString: Untagged
@@ -213,7 +214,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3215242177463776957}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: a70cbc88f15e38a4386c3e9cb7faa2b1, type: 2}
   m_CullingMode: 0
@@ -226,6 +227,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &4179885114037183859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3215242177463776957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 613aea8fe9a855545b14d27464845e2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3698257452119654983
 GameObject:
   m_ObjectHideFlags: 0

@@ -30,6 +30,8 @@ public class TabOverlayHandlerScript : MonoBehaviour
 
     public void OnAccept()
     {
+
+        if(selected == null) return;
         if(selected.type == TabButtonHandler.TabButtonTypes.You)
         {
             SceneManager.LoadScene(badEnding);

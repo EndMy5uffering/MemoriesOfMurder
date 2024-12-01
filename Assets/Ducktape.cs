@@ -8,12 +8,17 @@ public class Ducktape : MonoBehaviour
 
     public void OnGrabEvent(bool b)
     {
-        player.GetComponent<PickupScript>().OnInteract(this.gameObject);
+        if(!b) 
+            player.GetComponent<PickupScript>().OnInteract(this.gameObject);
+        else
+        {
+            if(player.GetComponent<PickupScript>().GetHeldItem() == this.gameObject)
+                player.GetComponent<PickupScript>().DropItem();
+        }
     }
 
     public void OnGrabEnd(bool b)
     {
-        if(player.GetComponent<PickupScript>().GetHeldItem() == this.gameObject)
-            player.GetComponent<PickupScript>().DropItem();
+        
     }
 }

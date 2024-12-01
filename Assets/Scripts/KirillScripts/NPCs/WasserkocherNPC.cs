@@ -14,11 +14,15 @@ public class WasserkocherNPC : NPC
     public void PlayOpenWasserkocher()
     {
         // anim
+        if (animator != null)
+            animator.SetBool("isOpen", true);
     }
 
     public void PlayWasserkocherWirdGefuellt()
     {
         // anim
+        if (animator != null)
+            animator.SetTrigger("Fill");
         StartCoroutine(UpdateWasserkocherStateAfterAusfuellung(3));
     }
 
@@ -33,6 +37,7 @@ public class WasserkocherNPC : NPC
 
     private void PlayCloseWasserkocher()
     {
-        //anim
+        if (animator != null)
+            animator.SetBool("isOpen", false);
     }
 }
