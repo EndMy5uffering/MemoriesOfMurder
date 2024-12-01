@@ -1993,7 +1993,7 @@ MonoBehaviour:
   goodImage: {fileID: 1974421061}
   badImage: {fileID: 793551228}
   returnButton: {fileID: 942627024}
-  StartSceneID: 0
+  StartSceneID: 1
 --- !u!1 &1440672537
 GameObject:
   m_ObjectHideFlags: 0
