@@ -58,9 +58,16 @@ public class PlayerController : MonoBehaviour
 
         HandleMovement();
         HandleRotation();
-        if(Input.GetKeyDown(KeyCode.E)) HandleInteraction();
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            HandleInteraction();
+        }
 
-        if(Input.GetMouseButtonDown(0)) GameScene.onLeftClickEvent?.Invoke();
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            GameScene.onLeftClickEvent?.Invoke();
+        }
+
 
     }
 

@@ -20,6 +20,7 @@ public class TabOverlayHandlerScript : MonoBehaviour
 
     public void OnAcceptHoverEnter()
     {
+        AudioManager.Instance.PlayButtonHoverSound();
         selectionCircle.SetActive(true);
     }
 
@@ -30,18 +31,22 @@ public class TabOverlayHandlerScript : MonoBehaviour
 
     public void OnAccept()
     {
-        if(selected.type == TabButtonHandler.TabButtonTypes.You)
+        AudioManager.Instance.PlayButtonClickSound();
+        if (selected.type == TabButtonHandler.TabButtonTypes.You)
         {
+            AudioManager.Instance.StopMainBGM();
             SceneManager.LoadScene(badEnding);
         }
         else
         {
+            AudioManager.Instance.TransitionToEnding1();
             SceneManager.LoadScene(goodEnding);
         }
     }
 
     public void OnExitClick()
     {
+        AudioManager.Instance.PlayButtonClickSound();
         tabUI.SetActive(false);
         player.tabOpen = false;
         Cursor.lockState = CursorLockMode.None;

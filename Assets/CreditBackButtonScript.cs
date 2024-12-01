@@ -12,6 +12,7 @@ public class CreditBackButtonScript : MonoBehaviour
 
     public void OnButtonHoverEnter()
     {
+        AudioManager.Instance.PlayButtonHoverSound();
         underlineImage.SetActive(true);
     }
 
@@ -22,6 +23,7 @@ public class CreditBackButtonScript : MonoBehaviour
 
     public void OnButtonClick()
     {
+        AudioManager.Instance.PlayButtonClickSound();
         underlineImage.SetActive(false);
         SceneManager.LoadScene(startMenu);
     }

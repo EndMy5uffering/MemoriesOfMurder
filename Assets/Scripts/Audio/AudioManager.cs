@@ -88,19 +88,34 @@ public class AudioManager : Singleton<AudioManager>
         _titleScreenEvent.start();
     }
 
+    public void StopTitleScreenMusic()
+    {
+        _titleScreenEvent.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+    }
+
     public void PlayMainBGM()
     {
         _bgmEvent.start();
     }
 
-    public void PlayEndingBGM1()
+    public void StopMainBGM()
     {
-        _endingEvent1.start();
+        _bgmEvent.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
     }
 
-    public void PlayEndingBGM2()
+    public void PlayEnding2()
     {
         _endingEvent2.start();
+    }
+
+    public void TransitionToEnding1()
+    {
+        StartCoroutine(ToEnding1());
+    }
+
+    public void TransitionToEnding2()
+    {
+        StartCoroutine(ToEnding2());
     }
 
     public void TransitionToGame()
@@ -137,6 +152,20 @@ public class AudioManager : Singleton<AudioManager>
         _endingEvent2.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
         yield return new WaitForSecondsRealtime(0.5f);
         _titleScreenEvent.start();
+    }
+
+    private IEnumerator ToEnding1()
+    {
+        _bgmEvent.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        yield return new WaitForSecondsRealtime(0.5f);
+        _endingEvent1.start();
+    }
+
+    private IEnumerator ToEnding2()
+    {
+        _bgmEvent.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        yield return new WaitForSecondsRealtime(0.5f);
+        _endingEvent2.start();
     }
 
 

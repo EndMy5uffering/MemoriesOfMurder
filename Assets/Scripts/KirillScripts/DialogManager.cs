@@ -11,7 +11,7 @@ public class DialogManager : MonoBehaviour
 
     private Queue<string> sentences;
 
-    private bool isDialogActive = false;
+    public bool isDialogActive = false;
     private NPC curNpc;
     private Dialog curDialog;
 

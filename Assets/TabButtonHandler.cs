@@ -25,6 +25,7 @@ public class TabButtonHandler : MonoBehaviour
 
     public void OnCircleHoverEnter()
     {
+        AudioManager.Instance.PlayButtonHoverSound();
         selectionCircle.SetActive(true);
     }
 
@@ -37,8 +38,9 @@ public class TabButtonHandler : MonoBehaviour
     {
         Selected = true;
         selectionCircle.SetActive(true);
+        AudioManager.Instance.PlayButtonClickSound();
 
-        if(tabScript.selected != null)
+        if (tabScript.selected != null)
         {
             tabScript.selected.Selected = false;
             tabScript.selected.selectionCircle.SetActive(false);

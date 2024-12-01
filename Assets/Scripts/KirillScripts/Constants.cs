@@ -40,5 +40,5 @@ public static class Constants
     public const int WASCHMASCHINE_INT = 6;
     public const int WASSERHAHN_INT = 1;
     public const int WASSERKOCHER_INT = 4;
-    public const int WASSERKOCHER_INT = 5;
+    public const int SCHRANK_INT = 5;
 }
