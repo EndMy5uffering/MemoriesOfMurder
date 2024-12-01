@@ -49,6 +49,7 @@ public class GameManager : MonoBehaviour
 
     public UnityEvent<bool> onTakeWasserkocherEvent = new UnityEvent<bool>();
     public UnityEvent<bool> onTakeKeyEvent = new UnityEvent<bool>();
+    public UnityEvent<bool> onTakeLappenEvent = new UnityEvent<bool>();
 
     private void Awake()
     {
@@ -96,10 +97,19 @@ public class GameManager : MonoBehaviour
                     if (npcStatePair.state == -2)
                         kuehlschrank.Close();
                 }
-                kuehlschrank.ChangeState(npcStatePair.state);
+                else
+                    kuehlschrank.ChangeState(npcStatePair.state);
                 break;
             case Constants.LAPPE:
-                lappe.ChangeState(npcStatePair.state);
+                if (npcStatePair.state < 0)
+                {
+                    if (npcStatePair.state == -1)
+                        onTakeLappenEvent.Invoke(true);
+                    if (npcStatePair.state == -2)
+                        onTakeLappenEvent.Invoke(false);
+                }
+                else
+                    lappe.ChangeState(npcStatePair.state);
                 break;
             case Constants.LEICHE:
                 if (npcStatePair.state < 0)
@@ -110,7 +120,8 @@ public class GameManager : MonoBehaviour
                             OnMotherDeathActivateAnimators.OnMotherDeathDiscovered.Invoke();
                     }
                 }
-                lappe.ChangeState(npcStatePair.state);
+                else
+                    lappe.ChangeState(npcStatePair.state);
                 break;
             case Constants.MUELLEIMER:
                 muelleimer.ChangeState(npcStatePair.state);
