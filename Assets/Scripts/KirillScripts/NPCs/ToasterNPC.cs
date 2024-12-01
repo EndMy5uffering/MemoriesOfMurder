@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class ToasterNPC : NPC
 {
+
+    public Material clean;
+    public Renderer toasterBody;
+
     public override void Init()
     {
         this.STATE_AMOUNT = DialogTexts.dialogsToaster.Length;
@@ -12,7 +16,6 @@ public class ToasterNPC : NPC
     }
     public void PlayCleanAnimation()
     {
-        if (animator != null)
-            animator.SetBool("isClean", true);
+        toasterBody.material = clean;
     }
 }
